@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$tomato: hsl(4, 100%, 67%);
+$dark-slate-gray: hsl(234, 29%, 20%);
+$charcoal-gray: hsl(235, 18%, 26%);
+$gray: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+@mixin small-text{
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    @include flex-column;
+    align-items: center;
+}  
+
+.form-container, .success-message{
+    background-color: $white;
+}
+
+.form-container{
+    @include flex-column;
+}
+
+.flex-child-1{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.flex-child-2{
+    margin: 1.5rem;
+    color: $dark-slate-gray;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.stay-updated{
+    margin-top: 1rem;
+}
+
+p{
+    margin: 1.3rem 0;
+}
+
+ul{
+    list-style-image: url('../images/icon-list.svg');
+    margin: 2rem 1.5rem;
+
+    li{
+        margin-bottom: 1rem;
+    
+        span{
+            position: relative;
+            left: .8rem;
+            bottom: .5rem;
+        }
+    }
+}
+
+form{
+    display: grid;
+    grid-template-areas: 
+    "label"
+    "input"
+    "button";
+}
+
+label{
+    @include small-text;
+    grid-area: label;
+}
+
+.error-message{
+    color: $tomato;
+    display: grid;
+    grid-area: label;
+    justify-self: end;
+    @include small-text;
+}
+
+#email{
+    padding: 1.2rem;
+    margin: .5rem 0;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+#email:focus{
+    border: 1px solid $charcoal-gray;
+    outline: none;
+    background-color: $white;
+    color: $gray;
+}
+
+#submit, #dismiss{
+    color: $white;
+    font: 700 1rem 'Roboto', sans-serif;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    background-color: $dark-slate-gray;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#submit:hover, #dismiss:hover{
+    background-image: linear-gradient(to right, $tomato, hsl(29, 100%, 54%) );
+    box-shadow: .7rem 1rem 1rem hsl(4, 89%, 76%);
+}
+
+.hide{
+    display: none;
+}
+
+.input-error{
+    border: 1px solid $tomato;
+    color: $tomato;
+    background-color: hsl(4, 74%, 89%);
+    outline: none;
+}
+
+.success-message{
+    color: $dark-slate-gray;
+    
+    p{
+        line-height: 1.5;
+    }
+
+    span{
+        font-weight: 700;
+    }
+}
+
+.success-message-display{
+    height: 90vh;
+    @include flex-column;
+    padding: 1.5rem;
+}
+
+.message-wrapper{
+    height: 80%;
+    @include flex-column;
+    justify-content: center;
+}
+
+.dismiss-wrapper{
+    height: 20%;
+    flex-grow: 5;
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon-success{
+    max-width: 4rem;
+    margin-bottom: 2rem;
+}
+
+.attribution { 
+    font-size: .7rem; 
+    text-align: center; 
+    margin-bottom: 2rem;
+
+    a { 
+    color: hsl(228, 45%, 44%); 
+    }
+}
+
+@import 'desktop-style';

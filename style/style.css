@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container, .success-message {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-child-1 {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex-child-2 {
+  margin: 1.5rem;
+  color: hsl(234, 29%, 20%);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.stay-updated {
+  margin-top: 1rem;
+}
+
+p {
+  margin: 1.3rem 0;
+}
+
+ul {
+  list-style-image: url("../images/icon-list.svg");
+  margin: 2rem 1.5rem;
+}
+ul li {
+  margin-bottom: 1rem;
+}
+ul li span {
+  position: relative;
+  left: 0.8rem;
+  bottom: 0.5rem;
+}
+
+form {
+  display: grid;
+  grid-template-areas: "label" "input" "button";
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  grid-area: label;
+}
+
+.error-message {
+  color: hsl(4, 100%, 67%);
+  display: grid;
+  grid-area: label;
+  justify-self: end;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+#email {
+  padding: 1.2rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+}
+
+#email:focus {
+  border: 1px solid hsl(235, 18%, 26%);
+  outline: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(231, 7%, 60%);
+}
+
+#submit, #dismiss {
+  color: hsl(0, 0%, 100%);
+  font: 700 1rem "Roboto", sans-serif;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#submit:hover, #dismiss:hover {
+  background-image: linear-gradient(to right, hsl(4, 100%, 67%), hsl(29, 100%, 54%));
+  box-shadow: 0.7rem 1rem 1rem hsl(4, 89%, 76%);
+}
+
+.hide {
+  display: none;
+}
+
+.input-error {
+  border: 1px solid hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: hsl(4, 74%, 89%);
+  outline: none;
+}
+
+.success-message {
+  color: hsl(234, 29%, 20%);
+}
+.success-message p {
+  line-height: 1.5;
+}
+.success-message span {
+  font-weight: 700;
+}
+
+.success-message-display {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.message-wrapper {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dismiss-wrapper {
+  height: 20%;
+  flex-grow: 5;
+  display: flex;
+  align-items: flex-end;
+}
+
+.icon-success {
+  max-width: 4rem;
+  margin-bottom: 2rem;
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 55rem) {
+  body {
+    background-color: hsl(234, 29%, 20%);
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-container {
+    flex-direction: row-reverse;
+    max-width: 60rem;
+    border-radius: 30px;
+    padding: 1rem;
+  }
+  .flex-child-1 {
+    display: flex;
+  }
+  .flex-child-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    height: auto;
+    justify-content: center;
+    max-width: 28rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+  .stay-updated {
+    margin: 0;
+  }
+  ul {
+    margin: 0.5rem 1.5rem 1rem;
+  }
+  ul li {
+    margin-bottom: 0.7rem;
+  }
+  .success-message {
+    border-radius: 30px;
+  }
+  .success-message-display {
+    height: auto;
+    max-width: 30rem;
+    padding: 3rem;
+  }
+  .message-wrapper {
+    height: 100%;
+  }
+  .thanks {
+    line-height: 1;
+  }
+  .dismiss-wrapper {
+    height: 100%;
+  }
+  .attribution {
+    color: hsl(0, 0%, 100%);
+    margin: 0.5rem;
+  }
+  .attribution a {
+    color: hsl(4, 100%, 67%);
+  }
+}/*# sourceMappingURL=style.css.map */
